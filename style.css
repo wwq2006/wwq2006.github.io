@@ -1,63 +1,105 @@
-body,
-html{
-      margin: 0;
-      padding: 0;
-      height: 100%;
-}
-
-/* Hide scrollbar for Chrome, Safari and Opera */
-body::-webkit-scrollbar {
-  display: none;
-}
-
-/* Hide scrollbar for IE, Edge and Firefox */
 body {
-  -ms-overflow-style: none;  /* IE and Edge */
-  scrollbar-width: none;  /* Firefox */
+  padding: 0;
+  margin: 0;
+  background-color: #130d0a;
+  font-family: "Playfair Display", serif;
+  color: #fff;
 }
 
-svg {
-      display: block;
-      width: 100%;
-      height: 100vh;
-      position: fixed;
-      top: 0;
-      left: 0;
-}
-  
-.scrollElement {
-      position: absolute;
-      height: 6000px;
-      width: 100px;
-      top: 0;
-      z-index: 0;
+#hero {
+  height: 800px;
+  overflow: hidden;
+  position: relative;
 }
 
-  .btn {
-      position: fixed;
-      bottom: 5%;
-      right: 0px;
-      transform: translateX(-50%);
-      border: 1px solid #fff;
-      border-radius: 5px;
-      font-size: 0.9rem;
-      padding: 0.5rem 0.7em;
-      background-color: transparent;
-      color: #ffffff;
-      font-family: Verdana, Geneva, Tahoma, sans-serif;
-      -webkit-font-smoothing: antialiased;
-      cursor: pointer;
-      transition: all .3s;
-      z-index: 11;
+#content {
+  background-color: #130d0a;
+}
+
+.layer {
+  background-position: bottom center;
+  background-size: auto;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 800px;
+  position: fixed;
+  z-index: -1;
+}
+
+#hero-mobile {
+  display: none;
+  background: url("https://i.ibb.co/d7hw559/full-illustration.png") no-repeat center bottom/cover;
+  height: 320px;
+}
+
+.first-section {
+  padding: 50px 0 20px 0;
+}
+
+.text-header {
+  font-size: 50px;
+  text-align: center;
+}
+
+h1 {
+  line-height: 120%;
+  margin-bottom: 30px;
+}
+
+p {
+  color: #ede0d5;
+  font-size: 18px;
+  line-height: 150%;
+}
+
+#hero,
+.layer {
+  min-height: 800px;
+  max-width: 1900px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.layer-bg {
+  background-image: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/272781/ilu_bg.jpg");
+}
+
+.layer-1 {
+  background-image: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/272781/ilu_03.png");
+  background-position: left bottom;
+}
+
+.layer-2 {
+  background-image: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/272781/ilu_02.png");
+}
+
+.layer-3 {
+  background-image: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/272781/ilu_man.png");
+  background-position: right bottom;
+}
+
+.layer-4 {
+  background-image: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/272781/ilu_01.png");
+}
+
+.layer-overlay {
+  background-image: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/272781/ilu_overlay.png");
+}
+
+@media only screen and (max-width: 768px) {
+  #hero {
+    display: none;
   }
 
-  .btn_works {
-      left: 100px;
-      right: unset;
-      text-decoration: none;
+  #hero-mobile {
+    display: block;
   }
-
-  .btn:hover {
-      background: #ffffff;
-      color: #1B1734;
-  }
+}
+.tutorial-link {
+  color: #fff;
+  font-size: 18px;
+  text-decoration: underline;
+}
+.tutorial-link:hover {
+  color: #ede0d5;
+}
